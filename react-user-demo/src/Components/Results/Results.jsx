@@ -5,7 +5,6 @@ const Results = ({ data,key }) => {
       {data.map((inf) => (
         <div key={key} className="result" >
             <h3>{inf.username} ({inf.age} years old)</h3>
-            
         </div>
       ))}
     </>

@@ -1,19 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const UserInput = ({ submit }) => {
   // const [data, setData] = useState([]);
-  const [username, setUsername] = useState("");
-  const [age, setAge] = useState("");
+
+  const userName = useRef();
+  const userAge = useRef();
 
   const onSubmit = (e) => {
+    const enteredName = userName.current.value;
+    const enteredAge = userAge.current.value;
+
     e.preventDefault();
 
-    let user = { username: username, age: age };
+    let user = { username: enteredName, age: enteredAge };
 
     submit(user);
-
-    setUsername("");
-    setAge("");
   };
 
   return (
@@ -28,11 +29,9 @@ const UserInput = ({ submit }) => {
             name="UserName"
             id="UserName"
             className="input"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
             required
             minLength={1}
-            
+            ref={userName}
           />
         </div>
         <div className="container">
@@ -43,10 +42,9 @@ const UserInput = ({ submit }) => {
             type="number"
             id="Age"
             className="input"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
             required
             min={8}
+            ref={userAge}
           />
         </div>
         {/* <button className="btn">Add User</button> */}
