@@ -1,0 +1,16 @@
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(68, 68, 68);
+    width: 10em;
+    height: 3em;
+    border-radius: 7px;
+    margin: 10px auto;
+}
