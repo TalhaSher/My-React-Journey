@@ -13,7 +13,7 @@ const SingleKata = ({ kaata,onDelete,onToggle,currency }) => {
         />{" "}
       </h3>
       <p>{kaata.date}</p>
-       {currency ? <p>PKR {kaata.price} </p>: <p>$ {kaata.price}</p>} 
+      {currency ? <p>PKR {kaata.price} </p>: <p>$ {Math.floor(kaata.price/ 296.42)}</p>}
 
       {/*  */}
     </div >
