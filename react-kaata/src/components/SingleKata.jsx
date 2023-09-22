@@ -1,6 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 
-const SingleKata = ({ kaata,onDelete,onToggle }) => {
+const SingleKata = ({ kaata,onDelete,onToggle,currency }) => {
   return (
     <div className={`kaata ${kaata.paid && 'paid'}`}>
       <h3 onDoubleClick={() => onToggle(kaata.id)}>
@@ -13,7 +13,9 @@ const SingleKata = ({ kaata,onDelete,onToggle }) => {
         />{" "}
       </h3>
       <p>{kaata.date}</p>
-      <p>$ {kaata.price}</p>
+       {currency ? <p>PKR {kaata.price} </p>: <p>$ {kaata.price}</p>} 
+
+      {/*  */}
     </div >
   );
 };

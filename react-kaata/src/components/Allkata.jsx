@@ -17,6 +17,7 @@ const Allkata = ({ kaata, onDelete, onToggle, sum }) => {
           kaata={k}
           onDelete={onDelete}
           onToggle={onToggle}
+          currency={currency}
         />
       ))}
 
@@ -29,6 +30,10 @@ const Allkata = ({ kaata, onDelete, onToggle, sum }) => {
           Sum : $ {US}
         </p>
       )}
+      <h4>Tips :</h4>
+      <p style={{marginTop:'10px'}}> • Double tap on the name of the item to change its status to paid</p>
+      <p style={{marginTop:'10px'}}> • To change the currency from PKR to Us dollars tap on the sum</p>
+      <p style={{marginTop:'10px'}}> • Click on the Show button to reveal the form where you can add to Kaata</p>
     </>
   );
 };
